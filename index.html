@@ -8,6 +8,20 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="styl.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script>
+    // Function to update and display visit count
+    function updateVisitCount() {
+      let count = localStorage.getItem('visitCount') || 0;
+      count = parseInt(count) + 1;
+      localStorage.setItem('visitCount', count);
+      document.getElementById('visit-count').textContent = count;
+    }
+
+    // Call the function on page load
+    window.onload = function() {
+      updateVisitCount();
+    };
+  </script>
 </head>
 <body>
     <header class="header">
@@ -23,6 +37,10 @@
             </ul>
         </nav>
     </header>
+      <h1 class="counter">Welcome to My Website!</h1>
+  <p class="counter">This website has been visited:</p>
+  <p id="visit-count" class="counter">0</p>
+
     <section class="home" id="home">
         <div class="home-image">
             <img src="./logo.jpg" style="border-radius: 20px;" alt="">
@@ -195,23 +213,7 @@
   </style>
 
 
-  <h1 class="counter">Welcome to My Website!</h1>
-  <p class="counter">This website has been visited:</p>
-  <p id="visit-count" class="counter">0</p>
 
-  <script>
-    // Function to update and display visit count
-    function updateVisitCount() {
-      let count = localStorage.getItem('visitCount') || 0;
-      count = parseInt(count) + 1;
-      localStorage.setItem('visitCount', count);
-      document.getElementById('visit-count').textContent = count;
-    }
-
-    // Call the function on page load
-    window.onload = function() {
-      updateVisitCount();
-    };
-  </script>
+ 
 </body>
 </html>
