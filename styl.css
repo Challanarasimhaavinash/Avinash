@@ -16,16 +16,7 @@ body{
   padding: 0;
   background-color: #f4f4f4;
 }
- .counter {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-    }
-    #visit-count {
-      font-size: 24px;
-      font-weight: bold;
-    }
-
+ 
 .testimonial-container {
   max-width: 600px;
   margin: 50px auto;
@@ -351,3 +342,12 @@ textarea{
 .skill:hover .skill-level {
     width: 50%; 
 }
+.counter {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    #visit-count {
+      font-size: 24px;
+      font-weight: bold;
+    }
