@@ -331,3 +331,20 @@ textarea{
       font-size: 24px;
       font-weight: bold;
     }
+.testimonial-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 100px;
+   
+}
+
+/* Styles for each testimonial */
+.testimonial {
+    width: 33.33%; 
+    float: left;
+    transition: transform 0.5s ease;
+    border: 0.3rem solid var(--main-color);
+    border-radius: 20px;
+    padding: 30px;
+}
