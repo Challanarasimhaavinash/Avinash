@@ -182,3 +182,36 @@
         </div>
     </div>
 </section>
+ <style>
+    .counter {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    #visit-count {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+
+
+  <h1 class="counter">Welcome to My Website!</h1>
+  <p class="counter">This website has been visited:</p>
+  <p id="visit-count" class="counter">0</p>
+
+  <script>
+    // Function to update and display visit count
+    function updateVisitCount() {
+      let count = localStorage.getItem('visitCount') || 0;
+      count = parseInt(count) + 1;
+      localStorage.setItem('visitCount', count);
+      document.getElementById('visit-count').textContent = count;
+    }
+
+    // Call the function on page load
+    window.onload = function() {
+      updateVisitCount();
+    };
+  </script>
+</body>
+</html>
